@@ -1,0 +1,222 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+#JDK version
+export JAVA_8_ZULU_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home
+export JAVA_18_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+export JAVA_18_ORACLE_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.19.jdk/Contents/Home
+
+#java
+export JAVA_HOME=$JAVA_8_HOME
+PATH="/Applications/CMake.app/Contents/bin":"$PATH"
+
+#nvim
+export PATH=${PATH}:/Users/tianxiang.ftx/program/nvim-macos-arm64/bin
+
+#Android
+export ANDROID_HOME=/Users/tianxiang.ftx/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+export PIP_REQUIRE_VIRTUALENV=false
+
+#gradle
+export GRADLE_76_HOME=/Applications/gradle/gradle-7.6/bin
+export PATH="$PATH":"$GRADLE_76_HOME"
+
+#ghidra
+export PATH="$PATH:/Users/tianxiang.ftx/program/ghidra_10.3_DEV"
+
+#优先conda 虚拟环境pip
+# export PATH="$PATH:/Users/tianxiang.ftx/miniconda3/envs/myenv/bin"
+
+# alias pip="~/miniconda3/envs/myenv/bin/pip"
+
+#readelf and so on
+#binutil
+export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
+
+#jni helper,extract jni method json
+export PATH="$PATH:/Users/tianxiang.ftx/program/jni_helper"
+
+#arm32 gcc
+export PATH=$PATH:/Users/tianxiang.ftx/program/arm-gnu-toolchain-12.2.rel1-darwin-arm64-arm-none-eabi/bin
+
+#odps
+export PATH="$PATH:/Users/tianxiang.ftx/program/chromedriver"
+
+#odps
+export PATH="$PATH:/Users/tianxiang.ftx/program/odpscmd_public/bin"
+
+#odps
+export PATH="$PATH:/Users/tianxiang.ftx/program/jadx-1.4.4/bin"
+
+#dex2jar
+export PATH="$PATH:/Users/tianxiang.ftx/program/dex2jar"
+
+#openssl
+export PATH="$PATH:/opt/homebrew/opt/openssl@3.1/bin"
+
+#frida shortcut
+alias activate_frida="source /Users/tianxiang.ftx/code/client/app_hook/mineproj/bin/activate"
+#alias deactivate_frida="source /Users/tianxiang.ftx/code/client/app_hook/mineproj/bin/activate.sh"
+
+alias vim="nvim"
+
+# alias python="python3"
+# alias pip="pip3"
+
+alias lg="lazygit"
+
+alias tailf="tail -f"
+
+alias ra="ranger"
+alias tm="tmux"
+
+# push processor
+alias push_llm_processor='function _mine(){ scp -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "$1" root@30.79.166.5:/home/admin/mad7/llm_processor/eas_llm_processor/; };_mine'
+
+# flutter
+export FLUTTER_ROOT="/Users/tianxiang.ftx/flutter_sdk" #替换成你的flutter目录
+export PUB_HOSTED_URL=https://flutter.alibaba-inc.com #阿里内部pub源
+export FLUTTER_STORAGE_BASE_URL=http://aliuc-flutter-storage.alibaba.net/uc #flutter阿里内部源
+export PATH="$PATH:$FLUTTER_ROOT/.pub-cache/bin:$FLUTTER_ROOT/bin/:$FLUTTER_ROOT/bin/cache/dart-sdk/bin"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+# aliyun player
+export PATH="$PATH:/Users/tianxiang.ftx/program/ARTCPlayer"
+export DYLD_LIBRARY_PATH=/Users/tianxiang.ftx/program/ARTCPlayer
+
+# docker
+export PATH=$PATH:/opt/homebrew/bin/docker
+
+# eascmd
+export PATH="$PATH:/Users/tianxiang.ftx/program/eascmd"
+
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/tianxiang.ftx/.oh-my-zsh"
+
+setopt no_nomatch
+
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="agnoster"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+    git
+    zsh-autosuggestions
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/tianxiang.ftx/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/tianxiang.ftx/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/tianxiang.ftx/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/tianxiang.ftx/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# conda activate myenv
+conda deactivate
